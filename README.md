@@ -16,11 +16,15 @@ dataset
   
   
 ### Approach 1: 
-Features: HOG Features
-Classification Technique : Linear SVC
-Method: 10 fold cross validation i.e. the images in every class of the dataset is divided into 10 parts, in the first iteration 1st part is used for testing and the remaining 10 parts are used for training. For the second iteration 2ndpart is used for testing and the remaining parts along with the 1st part is used for training, this step goes on until 10 iterations.
+#### Features: HOG Features
+
+#### Classification Technique : Linear SVC
+
+#### Method: 10 fold cross validation 
+i.e. the images in every class of the dataset is divided into 10 parts, in the first iteration 1st part is used for testing and the remaining 10 parts are used for training. For the second iteration 2ndpart is used for testing and the remaining parts along with the 1st part is used for training, this step goes on until 10 iterations.
+
 Please look into the http://statweb.stanford.edu/~tibs/sta306bfiles/cvwrong.pdf for better understanding.
-IDE used: Spyder
+#### IDE used: Spyder
 
 Here we can observe that as we make use of a single feature and as we have very few images in few of the classes we wont be able to achieve a high accuracy. we can even observe the confusion matrix which signifies how well a class is classified. The classes with more number of images is classifed better than the one in which there are few images.
 
