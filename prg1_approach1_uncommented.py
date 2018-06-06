@@ -11,7 +11,7 @@ imgs = []
 y=[]
 file_size = []
 k=0
-path = r"G:\caltech\101_ObjectCategories"
+path = "/dataset" # Give the path here
 
 folder = os.listdir(path)
 for f in folder:
