@@ -8,14 +8,15 @@ from sklearn.svm import LinearSVC # Import the Linear SVM Classifier
 from skimage.feature import hog # Import Hog model to extract features
 from sklearn.metrics import confusion_matrix # Import confusion matrix to evaluate the performance
 
+# create the necessary empty lists
 imgs = []
 y=[]
 file_size = []
 k=0
-path = "/dataset" # Give the path here
+path = "/dataset" # Give the dataset path here
 
-folder = os.listdir(path)
-for f in folder:
+folder = os.listdir(path) # from the given path get the file names such as accordion, airplanes etc..
+for f in folder: # for every file name in the given path go inseide that directory and get the images
     subpath = os.path.join(path,f)   
     
     files = os.listdir(subpath)
@@ -48,7 +49,7 @@ for index, item in enumerate(y):
         
 y=np.array(y).astype(np.float64) 
 
-
+# Function to convert an image from color to grayscale
 def rgb2gray(rgb):
     gray = cv2.cvtColor(rgb, cv2.COLOR_BGR2GRAY)
     return gray
@@ -75,7 +76,7 @@ for img in imgs:
 a=np.array(a)
 
 score = []
-skf = StratifiedKFold(n_splits = 10)
+skf = StratifiedKFold(n_splits = 10) # divide the complete dataset in to 10 folds
 skf.get_n_splits(a, y)
 
 accuracy = 0
