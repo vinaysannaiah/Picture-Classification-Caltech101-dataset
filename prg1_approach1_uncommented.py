@@ -1,11 +1,12 @@
-from PIL import Image
-import os, os.path, cv2
-from cv2 import imread
-import numpy as np
-from sklearn.model_selection import StratifiedKFold 
-from sklearn.svm import LinearSVC
-from skimage.feature import hog
-from sklearn.metrics import confusion_matrix
+#Download the necessary libraries
+
+import os, os.path
+import cv2 # important : import Open CV
+import numpy as np # Import numpy library 
+from sklearn.model_selection import StratifiedKFold #Import stratified kfold as we are using a 10fold cross validation approach
+from sklearn.svm import LinearSVC # Import the Linear SVM Classifier
+from skimage.feature import hog # Import Hog model to extract features
+from sklearn.metrics import confusion_matrix # Import confusion matrix to evaluate the performance
 
 imgs = []
 y=[]
