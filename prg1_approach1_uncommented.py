@@ -16,17 +16,17 @@ k=0
 path = "/dataset" # Give the dataset path here
 
 folder = os.listdir(path) # from the given path get the file names such as accordion, airplanes etc..
-for f in folder: # for every file name in the given path go inseide that directory and get the images
-    subpath = os.path.join(path,f)   
+for file in folder: # for every file name in the given path go inseide that directory and get the images
+    subpath = os.path.join(path,file)  # Join the name of these files to the previous path 
     
-    files = os.listdir(subpath)
+    files = os.listdir(subpath) # Take these image names to a list called files
     j=0
-    for i in range(np.size(files)):
+    for i in range(np.size(files)): # now we shall loop through these number of files
         
-        im=imread(subpath+'/'+files[0+j])
+        im=cv2.imread(subpath+'/'+files[0+j]) # Read the images from this subpath
         
-        imgs.append(im)
-        y.append(k)
+        imgs.append(im) # append all the read images to a list called imgs
+        y.append(k) # generate a labe to every file and append it to y
 
         j+=1
         if (j == (np.size(files))):
