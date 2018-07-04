@@ -15,7 +15,7 @@ dataset
   -->airplanes etc.
   
   
-### Approach 1: 
+### Approach 1:  prg1_approach1_uncommented.py
 #### Features: HOG Features
 
 #### Classification Technique : Linear SVC
@@ -29,7 +29,13 @@ Please look into the http://statweb.stanford.edu/~tibs/sta306bfiles/cvwrong.pdf 
 Here we can observe that as we make use of a single feature and as we have very few images in few of the classes we wont be able to achieve a high accuracy. we can even observe the confusion matrix which signifies how well a class is classified. The classes with more number of images is classifed better than the one in which there are few images.
 
 
-### Approach 2: 
+### Approach 2: prg2_approach2.ipynb
+
+#### Features: HOG Features, Hu Moments, Histogrm, Haralick textures
+
+#### Classification Technique : Linear SVC / SVM / Random Forests / Decision Trees / Naive Bayes etc.
+
+#### IDE used: Jupyter Notebook
 Here lets try to improve our accuracy and also let us try to validate the classification technique that best suits our problem.
 uploading soon .. .. ..
 
